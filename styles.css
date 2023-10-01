@@ -1,154 +1,150 @@
-*{
-box-sizing: border-box;
-margin:0;
-padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
+body {
   background-color: #253439;
 }
-.logo{
-  width:300px;
-  height:100px;
+.logo {
+  width: 300px;
+  height: 100px;
+}
+
+.logo img {
+  width: 100%;
+  height: 90px;
   
 }
 
-.logo img{
-  width:100%;
-  height:90px;
-  
-  
-  
-}
-
-
-.navbar{
-  
-  display:flex;
+.navbar {
+  display: flex;
   align-items: center;
-  
+
   justify-content: space-around;
-  border-bottom:1px solid lightgray;
-  
-  
+  border-bottom: 1px solid lightgray;
+  background-color: #253439;
 }
 
-.nav-list{
-  
+.nav-list {
   justify-content: center;
   align-items: center;
   list-style: none;
 }
 .nav-list li {
- display: inline-block;
- padding:20px 10px;
- 
- 
- 
+  display: inline-block;
+  padding: 20px 10px;
 }
 
-.nav-list li a{
+#lightmode {
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+}
+#darkmode {
+  font-size: 1em;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+.nav-list li a {
   text-decoration: none;
   font-size: 1.2em;
-  color:white ;
-  margin-left:2em;
-  
+  color: white;
+  margin-left: 2em;
 }
-.nav-list li a:hover,.nav-list li a:active{
-  color:lightblue ;
+.nav-list li a:hover,
+.nav-list li a:active {
+  color: lightblue;
   transition: 0.2s ease-in-out;
 }
-.nav-list li a:active{
-  color:lightblue ;
+.nav-list li a:active {
+  color: lightblue;
 }
-.menu{
-  
-  display:none;
+.menu {
+  display: none;
 }
 .menu .bars {
-  width:25px;
-  height:3px;
+  width: 25px;
+  height: 3px;
   background-color: white;
-  margin-top:4px;
-  margin-bottom:4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
-@media (max-width:1000px){
-  
- 
-  .navbar{
-
+@media (max-width: 1000px) {
+  #lightmode {
+    margin-left: 3.2em;
+  }
+  .logo {
+    border-bottom: 0.5px solid lightgray;
+  }
+  .navbar {
     flex-direction: column;
   }
- 
-  .menu{
-    display:block;
-    position:absolute;
-    right:15px;
-    top:40px;
-    cursor:pointer ;
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
   }
-  .menu{
-    display:block;
-    position:absolute;
-    right:15px;
-    top:40px;
-    cursor:pointer ;
-    
+  .menu {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
   }
-  
+
   .nav-list li {
-    display:block;
+    display: block;
   }
-  .nav-list{
+  .nav-list {
     display: none;
   }
-
 }
 
-@media (max-width:330px){
- 
-  
-  .logo{
-    width:200px;
+@media (max-width: 330px) {
+  .logo {
+    width: 200px;
+    border-bottom: 0.5px solid lightgray;
   }
-  .logo img{
-    width:100% ;
+  .logo img {
+    width: 100%;
   }
-  .nav-list li a{
-    font-size:1em;
+  .nav-list li a {
+    font-size: 1em;
   }
   .menu .bars {
-    width:15px;
-    height:2px;
+    width: 15px;
+    height: 2px;
     background-color: white;
-    margin-top:4px;
-    margin-bottom:4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
   }
-
 }
 
-@media (max-width:220px){
-
-  
-  .logo{
-    width:100px;
+@media (max-width: 220px) {
+  .logo {
+    width: 400px;
   }
-  .logo img{
-    width:100% ;
+  .logo img {
+    width: 100%;
   }
-  .nav-list li a{
-    font-size:.5em;
+  .nav-list li a {
+    font-size: 0.5em;
   }
   .menu .bars {
-    width:6px;
-    height:2px;
+    width: 6px;
+    height: 2px;
     background-color: white;
-    margin-top:2px;
-    margin-bottom:3px;
+    margin-top: 2px;
+    margin-bottom: 3px;
   }
-  .menu{
-    display:  none;
+  .menu {
+    display: none;
   }
-  
 }
