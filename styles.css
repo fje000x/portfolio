@@ -6,7 +6,10 @@
 
 body {
   background-color: #253439;
+  width: 100vw;
+  height: 100%;
 }
+
 .logo {
   width: 220px;
   height: 100px;
@@ -15,7 +18,6 @@ body {
 .logo img {
   width: 100%;
   height: 90px;
-  
 }
 
 .navbar {
@@ -32,46 +34,55 @@ body {
   align-items: center;
   list-style: none;
 }
+
 .nav-list li {
   display: inline-block;
   padding: 20px 10px;
 }
 
 #lightmode {
-  font-size: 1em;
+  font-size: 1.2em;
   color: white;
   cursor: pointer;
   max-width: fit-content;
   max-height: fit-content;
-
 }
+
 #darkmode {
-  font-size: 1em;
+  font-size: 1.2em;
   color: white;
   display: none;
   cursor: pointer;
-  
+  max-width: fit-content;
+  max-height: fit-content;
 }
+
 .nav-list li a {
   text-decoration: none;
   font-size: 1.2em;
   color: white;
   margin-left: 2em;
 }
+
 .nav-list li a:hover,
-.nav-list li a:active, .nav-list #lightmode:hover  {
-  color: aqua;
- 
+.nav-list li a:active,
+.nav-list #lightmode:hover,
+.nav-list #darkmode:hover {
+  color: #00ffff;
+  font-size: 1.1em;
   transition: 0.2s ease-in-out;
-  border-radius: 10%;
-  
+  text-decoration: none;
 }
+
 .nav-list li a:active {
   color: lightblue;
+  text-decoration: none;
 }
+
 .menu {
   display: none;
 }
+
 .menu .bars {
   width: 25px;
   height: 3px;
@@ -81,15 +92,26 @@ body {
 }
 
 @media (max-width: 1015px) {
+
+  .nav-list li a:hover,
+  .nav-list li a:active,
+  .nav-list #lightmode:hover,
+  .nav-list #darkmode:hover {
+    font-size: 1.2em !important;
+  }
+
   #lightmode {
-    margin-left: 3.2em;
+    margin-left: 1.8em;
   }
+
   #darkmode {
-    margin-left: 3.2em;
+    margin-left: 1.8em;
   }
+
   .logo {
     border-bottom: 0.5px solid lightgray;
   }
+
   .navbar {
     flex-direction: column;
   }
@@ -101,6 +123,7 @@ body {
     top: 40px;
     cursor: pointer;
   }
+
   .menu {
     display: block;
     position: absolute;
@@ -112,10 +135,12 @@ body {
   .nav-list li {
     display: block;
   }
+
   .nav-list {
     display: none;
   }
-  .container{
+
+  .container {
     grid-template-columns: 1fr;
   }
 }
@@ -125,12 +150,15 @@ body {
     width: 200px;
     border-bottom: 0.5px solid lightgray;
   }
+
   .logo img {
     width: 100%;
   }
+
   .nav-list li a {
     font-size: 1em;
   }
+
   .menu .bars {
     width: 15px;
     height: 2px;
@@ -144,12 +172,15 @@ body {
   .logo {
     width: 400px;
   }
+
   .logo img {
     width: 100%;
   }
+
   .nav-list li a {
     font-size: 0.5em;
   }
+
   .menu .bars {
     width: 6px;
     height: 2px;
@@ -157,105 +188,108 @@ body {
     margin-top: 2px;
     margin-bottom: 3px;
   }
+
   .menu {
     display: none;
   }
 }
 
-
-
-
-
-.container{
-  display:grid ;
+.container {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  color:white ;
- 
-  
+  color: white;
 }
 
-
-.img img{
-  max-width: 25em;
+.img img {
+  max-width: 20em;
   border-radius: 50%;
-  padding:1em;
+  padding: 1em;
   align-self: center;
   margin: auto;
 }
-.seperator{
+
+.seperator {
   grid-column: span 3;
   text-align: center;
-  color:white ;
+  color: #253439;
   font-size: 1.2em;
- 
-  
-  
-  
-  
+  background-color: lightgrey;
 }
-.seperator a,.seperator a:visited{
+
+.seperator a,
+.seperator a:visited {
   text-decoration: none;
-  color:white;
-  
+  color: #253439;
 }
-.seperator a svg:hover{
-  
-  color:aqua;
+
+.seperator a svg:hover {
+  color: aqua;
   text-decoration: underline;
- 
-
-  
 }
 
-
-  
-
-
-
-.seperator svg{
-  
-  
+.seperator svg {
   justify-content: space-between;
   margin-top: 1em;
   cursor: pointer;
 }
-.seperator svg:last-child{
 
-  margin-left:15px;
+.seperator svg:last-child {
+  margin-left: 15px;
 }
-.seperator svg:first-child{
-  margin-right:15px;
-  
+
+.seperator svg:first-child {
+  margin-right: 15px;
 }
-.img img  , .about {
-  display:flex;
+
+.img img,
+.about {
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   border-radius: 50%;
-  
 }
 
-.about{
+.about {
   margin: auto;
   font-size: 1em;
   font-weight: lighter;
-  color:white ;
+  color: white;
   letter-spacing: 1.3px;
   max-width: fit-content;
-  padding:2em;
+  padding: 2em;
   grid-column: span 2;
-
 }
 
-@media (max-width:800px){
-  .container{
+@media (max-width: 800px) {
+  .container {
     display: block;
     grid-template-columns: 1fr 1fr;
   }
-  .about{
+
+  .about {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .img img {
+    max-width: 20em;
+  }
+
+  .container {
+    font-size: smaller;
+  }
+}
+
+@media (min-width: 2000px) {
+  * {
+    font-size: large;
+  }
+
+  .logo {
+    width: 300px;
   }
 }

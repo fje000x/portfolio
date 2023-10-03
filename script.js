@@ -2,20 +2,24 @@ const hamburger = document.querySelector(".menu");
 const navList = document.querySelector(".nav-list");
 const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo");
-const lightmode = document.querySelector("#lightmode") ;
-const darkmode = document.querySelector("#darkmode") ;
+const lightmode = document.querySelector("#lightmode");
+const darkmode = document.querySelector("#darkmode");
+const about = document.querySelector(".about p");
+const icons = document.querySelector(".seperator")
 let clicked = false;
 //makes hamburger functional
-hamburger.addEventListener("click", () => {
-  if (!clicked) {
-    navList.style.display = "block";
+document.addEventListener("DOMContentLoaded", function () {
+  hamburger.addEventListener("click", () => {
+    if (!clicked) {
+      navList.style.display = "block";
 
-    clicked = true;
-  } else {
-    navList.style.display = "none";
+      clicked = true;
+    } else {
+      navList.style.display = "none";
 
-    clicked = false;
-  }
+      clicked = false;
+    }
+  })
 });
 //checks window size 
 function checkWindowSize() {
@@ -26,6 +30,7 @@ function checkWindowSize() {
   } else {
     hamburger.style.display = "block";
     navList.style.display = "none";
+
   }
 }
 
@@ -34,16 +39,25 @@ checkWindowSize();
 window.addEventListener("resize", checkWindowSize);
 
 // DARK MODE / LightMode 
-lightmode.addEventListener("click",()=>{
-    document.body.style.backgroundColor = "#fff" ;
-    lightmode.style.display="none" ;
-    darkmode.style.display="inline-block";
+
+lightmode.addEventListener("click", () => {
+  document.body.style.background = "linear-gradient(to bottom, #253439, white)";
+
+  lightmode.style.display = "none";
+  darkmode.style.display = "inline-block";
+  about.style.color = "black";
+
+
 
 })
 
-darkmode.addEventListener("click",()=>{
-    document.body.style.backgroundColor = "#253439" ;
-    lightmode.style.display="inline-block" ;
-    darkmode.style.display="none";
+
+darkmode.addEventListener("click", () => {
+  document.body.style.background = "#253439";
+  lightmode.style.display = "inline-block";
+  darkmode.style.display = "none";
+  about.style.color = "white";
+
+
 
 })
