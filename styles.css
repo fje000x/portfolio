@@ -1,14 +1,14 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
   background-color: #253439;
 }
 .logo {
-  width: 300px;
+  width: 220px;
   height: 100px;
 }
 
@@ -41,12 +41,16 @@ body {
   font-size: 1em;
   color: white;
   cursor: pointer;
+  max-width: fit-content;
+  max-height: fit-content;
+
 }
 #darkmode {
   font-size: 1em;
   color: white;
   display: none;
   cursor: pointer;
+  
 }
 .nav-list li a {
   text-decoration: none;
@@ -55,9 +59,12 @@ body {
   margin-left: 2em;
 }
 .nav-list li a:hover,
-.nav-list li a:active {
-  color: lightblue;
+.nav-list li a:active, .nav-list #lightmode:hover  {
+  color: aqua;
+ 
   transition: 0.2s ease-in-out;
+  border-radius: 10%;
+  
 }
 .nav-list li a:active {
   color: lightblue;
@@ -73,8 +80,11 @@ body {
   margin-bottom: 4px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1015px) {
   #lightmode {
+    margin-left: 3.2em;
+  }
+  #darkmode {
     margin-left: 3.2em;
   }
   .logo {
@@ -104,6 +114,9 @@ body {
   }
   .nav-list {
     display: none;
+  }
+  .container{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -146,5 +159,103 @@ body {
   }
   .menu {
     display: none;
+  }
+}
+
+
+
+
+
+.container{
+  display:grid ;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  color:white ;
+ 
+  
+}
+
+
+.img img{
+  max-width: 25em;
+  border-radius: 50%;
+  padding:1em;
+  align-self: center;
+  margin: auto;
+}
+.seperator{
+  grid-column: span 3;
+  text-align: center;
+  color:white ;
+  font-size: 1.2em;
+ 
+  
+  
+  
+  
+}
+.seperator a,.seperator a:visited{
+  text-decoration: none;
+  color:white;
+  
+}
+.seperator a svg:hover{
+  
+  color:aqua;
+  text-decoration: underline;
+ 
+
+  
+}
+
+
+  
+
+
+
+.seperator svg{
+  
+  
+  justify-content: space-between;
+  margin-top: 1em;
+  cursor: pointer;
+}
+.seperator svg:last-child{
+
+  margin-left:15px;
+}
+.seperator svg:first-child{
+  margin-right:15px;
+  
+}
+.img img  , .about {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  
+}
+
+.about{
+  margin: auto;
+  font-size: 1em;
+  font-weight: lighter;
+  color:white ;
+  letter-spacing: 1.3px;
+  max-width: fit-content;
+  padding:2em;
+  grid-column: span 2;
+
+}
+
+@media (max-width:800px){
+  .container{
+    display: block;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about{
+    grid-column: span 1;
   }
 }

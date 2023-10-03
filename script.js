@@ -20,7 +20,7 @@ hamburger.addEventListener("click", () => {
 //checks window size 
 function checkWindowSize() {
   const screenWidth = window.innerWidth;
-  if (screenWidth > 1000) {
+  if (screenWidth > 1020) {
     hamburger.style.display = "none";
     navList.style.display = "block";
   } else {
