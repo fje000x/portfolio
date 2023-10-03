@@ -41,11 +41,12 @@ window.addEventListener("resize", checkWindowSize);
 // DARK MODE / LightMode 
 
 lightmode.addEventListener("click", () => {
-  document.body.style.background = "linear-gradient(to bottom, #253439, white)";
+  document.body.style.background = "linear-gradient(to bottom, #253439, white) no-repeat";
 
   lightmode.style.display = "none";
   darkmode.style.display = "inline-block";
-  about.style.color = "black";
+  about.style.color="black"
+  icons.style.backgroundColor="white"
 
 
 
@@ -61,3 +62,4 @@ darkmode.addEventListener("click", () => {
 
 
 })
+

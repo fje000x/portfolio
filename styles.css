@@ -5,6 +5,7 @@
 }
 
 body {
+  
   background-color: #253439;
   width: 100vw;
   height: 100%;
@@ -71,7 +72,7 @@ body {
 .nav-list li a:active,
 .nav-list #lightmode:hover,
 .nav-list #darkmode:hover {
-  color: #00ffff;
+  color: lightblue;
   
   transition: 0.2s ease-in-out;
   
@@ -211,9 +212,8 @@ body {
 .seperator {
   grid-column: span 3;
   text-align: center;
-  color: #253439;
   font-size: 1.2em;
-  background-color: lightgrey;
+  background-color: lightgray;
 }
 
 .seperator a,
@@ -223,7 +223,7 @@ body {
 }
 
 .seperator a svg:hover {
-  color: aqua;
+  color: grey;
   text-decoration: underline;
 }
 
@@ -231,6 +231,7 @@ body {
   justify-content: space-between;
   margin-top: 1em;
   cursor: pointer;
+  color:#253439 ;
 }
 
 .seperator svg:last-child {
@@ -249,6 +250,15 @@ body {
   text-align: center;
   border-radius: 50%;
 }
+#hello{
+  font-size:25px;
+  width:100% ;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color:lightblue ;
+  
+}
+
 
 .about {
   margin: auto;
@@ -321,5 +331,4 @@ body {
   .logo {
     width: 300px;
   }
-}
 }
