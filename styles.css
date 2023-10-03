@@ -23,6 +23,8 @@ body {
 .navbar {
   display: flex;
   align-items: center;
+  
+
 
   justify-content: space-around;
   border-bottom: 1px solid lightgray;
@@ -33,6 +35,7 @@ body {
   justify-content: center;
   align-items: center;
   list-style: none;
+ 
 }
 
 .nav-list li {
@@ -69,9 +72,9 @@ body {
 .nav-list #lightmode:hover,
 .nav-list #darkmode:hover {
   color: #00ffff;
-  font-size: 1.1em;
+  
   transition: 0.2s ease-in-out;
-  text-decoration: none;
+  
 }
 
 .nav-list li a:active {
@@ -93,12 +96,6 @@ body {
 
 @media (max-width: 1015px) {
 
-  .nav-list li a:hover,
-  .nav-list li a:active,
-  .nav-list #lightmode:hover,
-  .nav-list #darkmode:hover {
-    font-size: 1.2em !important;
-  }
 
   #lightmode {
     margin-left: 1.8em;
@@ -166,6 +163,7 @@ body {
     margin-top: 4px;
     margin-bottom: 4px;
   }
+ 
 }
 
 @media (max-width: 220px) {
@@ -264,25 +262,56 @@ body {
 }
 
 @media (max-width: 800px) {
+
+  #darkmode{
+    font-size: 1.2em;
+  }
+  #lightmode{
+    font-size: 1.2em;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+  
   .container {
     display: block;
     grid-template-columns: 1fr 1fr;
+    
   }
 
   .about {
     grid-column: span 1;
+    max-width: 100vw;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
+  #darkmode{
+    font-size: 1em;
+  }
+  #lightmode{
+    font-size: 1em;
+  }
+  ::-webkit-scrollbar {
+    width: 2px; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: lightgrey; 
+  }
   .img img {
     max-width: 20em;
+    
+  
   }
 
   .container {
-    font-size: smaller;
+    font-size: 1em ;
+
   }
 }
+  
+
 
 @media (min-width: 2000px) {
   * {
@@ -292,4 +321,5 @@ body {
   .logo {
     width: 300px;
   }
+}
 }
