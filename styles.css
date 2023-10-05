@@ -453,7 +453,7 @@ body {
 
 .learning-goals p {
   letter-spacing: 1px;
-  line-height: 23px;
+  l
 }
 
 .tech {
@@ -475,7 +475,34 @@ body {
   }
 
   .img img {
-    max-width: 200px;
+    max-width: 30em;
+  }
+  .container{
+    height:100vh;
+  }
+  .about p{
+    font-size: 2em;
+    
+  }
+  .tech{
+    font-size: 2em;
+    
+  }
+  .tech img{
+    width:25%;
+    height:auto
   }
 
-}
+  .learning-goals p{
+    font-size:1.5em;
+    margin-bottom:2em;
+    width:80%;
+    margin:auto;
+  }
+  .learning-goals h1{
+    font-size:2em
+  }
+
+
+  }
+

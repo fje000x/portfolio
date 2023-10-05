@@ -86,7 +86,7 @@ darkmode.addEventListener("click", () => {
   lightmodecontainer2.style.background="darkslategrey"
   tech.style.color="lightskyblue"
   learning.style.color="lightskyblue"
-  learningP.style.color="lightskyblue"
+  learningP.style.color="white"
 
 
 })
