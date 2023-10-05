@@ -4,12 +4,22 @@
   padding: 0px;
 }
 
+
 body {
-  
+
   background-color: #253439;
   width: 100vw;
-  height: 100vh;
+  max-height: 100%;
 }
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
 
 .logo {
   width: 220px;
@@ -24,7 +34,10 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  
+
+  position: relative;
+
+
 
 
   justify-content: space-around;
@@ -36,7 +49,7 @@ body {
   justify-content: center;
   align-items: center;
   list-style: none;
- 
+
 }
 
 .nav-list li {
@@ -73,9 +86,9 @@ body {
 .nav-list #lightmode:hover,
 .nav-list #darkmode:hover {
   color: lightblue;
-  
+
   transition: 0.2s ease-in-out;
-  
+
 }
 
 .nav-list li a:active {
@@ -95,7 +108,7 @@ body {
   margin-bottom: 4px;
 }
 
-@media (max-width: 1015px) {
+@media (max-width: 1050px) {
 
 
   #lightmode {
@@ -138,9 +151,8 @@ body {
     display: none;
   }
 
-  .container {
-    grid-template-columns: 1fr;
-  }
+
+
 }
 
 @media (max-width: 330px) {
@@ -151,6 +163,7 @@ body {
 
   .logo img {
     width: 100%;
+
   }
 
   .nav-list li a {
@@ -164,7 +177,8 @@ body {
     margin-top: 4px;
     margin-bottom: 4px;
   }
- 
+
+
 }
 
 @media (max-width: 220px) {
@@ -199,14 +213,32 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  max-height: 100%;
+
 }
 
+.container {
+  margin-bottom: 10em;
+}
+
+
+
+
+
+
+
+
+
 .img img {
-  max-width: 20em;
+  max-width: 18em;
   border-radius: 50%;
   padding: 1em;
   align-self: center;
+
   margin: auto;
+
+
+
 }
 
 .seperator {
@@ -231,7 +263,7 @@ body {
   justify-content: space-between;
   margin-top: 1em;
   cursor: pointer;
-  color:#253439 ;
+  color: #253439;
 }
 
 .seperator svg:last-child {
@@ -250,82 +282,187 @@ body {
   text-align: center;
   border-radius: 50%;
 }
-#typed{
-  font-size:2em;
-  width:100% ;
+
+#typed {
+  font-size: 2em;
+  width: 100%;
   letter-spacing: 2px;
-  color:lightblue ;
+  color: lightskyblue;
   font-weight: 500;
-  
+
 }
 
 
 .about {
-  margin: auto;
-  font-size: 1em;
-  font-weight:400 ;
+
+
+  font-weight: 400;
   color: white;
   letter-spacing: 1.3px;
   max-width: fit-content;
-  
-  padding: 2em;
+
+  padding: 1em;
   grid-column: span 2;
-  
+
+
+}
+
+.about p {
+  font-size: 1.4em;
+  text-align: center;
 }
 
 @media (max-width: 800px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
 
-  #darkmode{
+  ::-webkit-scrollbar-thumb {
+    background-color: lightblue;
+  }
+
+  #darkmode {
     font-size: 1.2em;
   }
-  #lightmode{
+
+  #lightmode {
     font-size: 1.2em;
   }
-  body{
+
+  body {
     overflow-x: hidden;
   }
 
-  
+
   .container {
     display: block;
     grid-template-columns: 1fr 1fr;
-    
+
+
+
+
+
   }
 
   .about {
     grid-column: span 1;
     max-width: 100vw;
     max-height: 100%;
+    margin-top: 2em;
+    font-size: smaller;
+    margin-bottom: 5em;
+
   }
+
+  .img img {
+    max-width: 18em;
+  }
+
+  #typed {
+    font-size: 1.5em;
+  }
+
 }
 
 @media (max-width: 375px) {
-  #darkmode{
+  #darkmode {
     font-size: 1em;
   }
-  #lightmode{
+
+  #lightmode {
     font-size: 1em;
   }
+
   ::-webkit-scrollbar {
-    width: 2px; 
+    width: 2px;
   }
+
   ::-webkit-scrollbar-thumb {
-    background-color: lightgrey; 
+    background-color: lightgrey;
   }
+
   .img img {
-    max-width: 10em;
-    
-  
+    max-width: 18em;
   }
 
   .container {
-    font-size: 1em ;
-
+    grid-gap: 4em;
   }
+
+
+
+  .about p {
+    font-size: small;
+  }
+
+
 }
 
 
-  
+.inner-wrapper2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  background-color: darkslategrey;
+  min-height: 100vh;
+  width: 100%;
+
+
+
+
+}
+
+
+.tech h1 {
+
+
+  color: lightskyblue;
+  font-weight: lighter;
+  font-size: 2em;
+  margin-top: 1em;
+
+
+}
+
+.tech img {
+  border: 1px solid transparent;
+  width: 20em;
+  margin-top: 2em;
+
+
+}
+
+.learning-goals {
+  font-size: 1.4em;
+  padding: 1em;
+  color: white;
+  margin-top: 1em;
+  grid-column: span 3;
+}
+
+.learning-goals h1 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-weight: lighter;
+  color: lightskyblue;
+}
+
+.learning-goals p {
+  letter-spacing: 1px;
+  line-height: 23px;
+}
+
+.tech {
+  grid-column: span 3;
+}
+
+
+
+
 
 
 @media (min-width: 2000px) {
@@ -336,6 +473,9 @@ body {
   .logo {
     width: 300px;
   }
+
+  .img img {
+    max-width: 200px;
+  }
+
 }
-
-

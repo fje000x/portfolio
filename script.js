@@ -7,20 +7,37 @@ const darkmode = document.querySelector("#darkmode");
 const about = document.querySelector(".about p");
 const icons = document.querySelector(".seperator")
 const hello= document.querySelector("#hello")
+const container = document.querySelector(".container")
+const lightmodecontainer2 = document.querySelector(".inner-wrapper2")
+const tech = document.querySelector(".tech h1")
+const learning = document.querySelector(".learning-goals h1")
+const learningP = document.querySelector(".learning-goals p")
 let clicked = false;
 const typed =document.querySelector("#typed")
 let stack = []
-const word ="Hello!"
+const word ="Welcome!!"
 //makes hamburger functional
 document.addEventListener("DOMContentLoaded", function () {
   hamburger.addEventListener("click", () => {
     if (!clicked) {
       navList.style.display = "block";
-
+      
+        if (window.innerWidth>=1000){
+          container.style.height="110vh"
+        }
+      
+     
+      
       clicked = true;
+
     } else {
       navList.style.display = "none";
-
+      if (window.innerWidth>=1000){
+        container.style.height="100vh"
+      }
+  
+  
+      
       clicked = false;
     }
   })
@@ -28,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //checks window size 
 function checkWindowSize() {
   const screenWidth = window.innerWidth;
-  if (screenWidth > 1020) {
+  if (screenWidth > 1050) {
     hamburger.style.display = "none";
     navList.style.display = "block";
   } else {
@@ -50,9 +67,11 @@ lightmode.addEventListener("click", () => {
   lightmode.style.display = "none";
   darkmode.style.display = "inline-block";
   about.style.color="#253439"
-  typed.style.color="#253439"
-
-
+  typed.style.color="hotpink"
+  lightmodecontainer2.style.background="lightpink"
+  tech.style.color="#253439"
+  learning.style.color="#253439"
+  learningP.style.color="#253439"
 
 })
 
@@ -62,7 +81,12 @@ darkmode.addEventListener("click", () => {
   lightmode.style.display = "inline-block";
   darkmode.style.display = "none";
   about.style.color = "white";
-  typed.style.color="lightblue"
+  typed.style.color="lightskyblue"
+  //chnage here
+  lightmodecontainer2.style.background="darkslategrey"
+  tech.style.color="lightskyblue"
+  learning.style.color="lightskyblue"
+  learningP.style.color="lightskyblue"
 
 
 })
@@ -74,6 +98,7 @@ function typeText(){
       stack.push(word[stack.length]);
       
       typed.textContent = stack.join("");
+      
       setTimeout(typeText,500) ;
   }
   else{
