@@ -16,7 +16,6 @@ header{
   background: rgb(43, 73, 73);
   width:100vw;
   z-index: 1000;
-  
   height: 90px;
   top:-5px;
   
@@ -105,7 +104,7 @@ header{
   }
   .nav-menu{
     position:absolute;
-    left:-120%;
+    left:-220%;
     top:70px;
     gap:2em;
     flex-direction: column;
@@ -200,7 +199,7 @@ header{
     background-color:#141414;
     color: lightgray;
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr ;
     width:100vw;
     
 
@@ -210,17 +209,21 @@ header{
   .grid-item2{
     background-color: #008080;
     color:white;
+    width:100vw;
   }
   .grid-item3{
     background-color:#2F4F4F ;
     color:white;
+    width:100vw;
   }
 
-
+.aboutme{
+  font-size: 1.2em;
+}
   
 
   .profileimg{
-  max-width:70%;
+  max-width:50%;
   margin: auto;
   }
   .profileimg img{
@@ -230,15 +233,62 @@ header{
     box-shadow: 0 0 20px rgba(173, 216, 230, 0.7);
   }
 
+  .griditemhome{
+  
+    background-color: slategrey;
+    height: 100vh;
+    min-width: 100vw;
+    
+    display: flex; /* Set display to flex */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    font-size: 2em;
+    background-image:url('images/diego-ph-5LOhydOtTKU-unsplash.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    max-height: 100vh;
+
+
+  }
+
+
+
+  .griditemhome p{
+    color:aliceblue;
+    
+   
+  
+  }
+  .griditemhome h2{
+    color:salmon;
+    font-weight: bold;
+  }
+  .griditemhome h3{
+    color:aliceblue;
+    font-weight: lighter;
+    font-size: smaller;
+  }
+
+
+  .lightblue{
+    color:#2F4F4F;
+  }
+
+
   @media (min-width:868px){
     .grid-item1{
       grid-template-columns: 1fr 1fr;
+    }
+    .quote{
+      grid-column: span 2;
     }
     .aboutme{
       font-size: larger;
     }
     .profileimg img{
-      width:90%;
+      width:100%;
     }
 
   }
@@ -250,4 +300,30 @@ header{
       width: 40%;
     }
 
+  }
+
+  @media screen and(max-width:200px){
+    body{
+      max-width: max-content;
+
+    }
+
+    .hamburger{
+      margin-right:10px;
+    }
+  }
+
+  @media (min-width:2000px){
+    header {
+      font-size: 2em;
+      height:max-content
+    }
+    .logo{
+      margin-top:40px;
+      width:400px;
+    }
+    .logo img{
+      width: 100%;
+    }
+ 
   }
