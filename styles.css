@@ -367,4 +367,19 @@ header{
 
 .home{
   padding:10px;
+  margin-bottom:6em;
+}
+
+.quotetext{
+  font-size:smallest;
+}
+
+.quotebtn{
+  margin-top:1em;
+  color:aliceblue ;
+  background-color: salmon;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding:3px;
 }

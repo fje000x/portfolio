@@ -3,7 +3,7 @@ const navMenu = document.querySelector(".nav-menu");
 const word ="Hello my name is" ;
 const typed= document.querySelector(".typed")
 let stack =[] ;
-const quote =document.querySelector(".quotetext")
+const quote =document.querySelector(".quote")
 const quotebtn = document.querySelector(".quotebtn")
 hamburger.addEventListener("click",()=>{
   hamburger.classList.toggle("active")
@@ -34,7 +34,7 @@ quotebtn.addEventListener("click",()=>{
       headers: { 'X-Api-Key': 'M3sUEFul/FZI1ZI19N9oag==q12b7duE5vXpvM8q'},
       contentType: 'application/json',
       success: function(result) {
-          quote.textContent=`"${(result[0].quote)}"- ${(result[0].author)}`;
+          quote.textContent=`"${(result[0].quote)}-${(result[0].author)}"`;
       },
       error: function ajaxError(jqXHR) {
           console.error('Error: ', jqXHR.responseText);
