@@ -24,32 +24,27 @@ window.addEventListener("DOMContentLoaded",()=>{
   }, 600); 
 })
 
-
 quotebtn.addEventListener("click",()=>{
+  fetch("https://type.fit/api/quotes")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+      const [author, source] = randomQuote.author.split(','); // Splitting the author and source
+      quote.textContent = `"${randomQuote.text}" - ${author.trim()}`; // Using only the author
+    })
+    .catch(function(error) {
+      console.error('Error: ', error);
+    });
+});
 
-  var category = 'inspirational'
-  $.ajax({
-      method: 'GET',
-      url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
-      headers: { 'X-Api-Key': 'M3sUEFul/FZI1ZI19N9oag==q12b7duE5vXpvM8q'},
-      contentType: 'application/json',
-      success: function(result) {
-          quote.textContent=`"${(result[0].quote)}" - ${(result[0].author)}`;
-      },
-      error: function ajaxError(jqXHR) {
-          console.error('Error: ', jqXHR.responseText);
-      }
-  });
-
-})
 
 window.addEventListener('load', function() {
   const loader = document.querySelector('.loading-screen');
-  const content = document.querySelector('.content');
-
+  
   // Simulate a delay (you can replace this with actual loading)
   setTimeout(function() {
     loader.style.display = 'none';
-    content.style.display = 'block';
   }, 1000); // Change 2000 to your desired loading time in milliseconds
 });
