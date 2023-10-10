@@ -161,6 +161,7 @@ header {
   }
 
 
+
 }
 
 grid-container {
@@ -246,7 +247,7 @@ grid-container {
 }
 
 .profileimg img {
-  max-width: 45%;
+  max-width: 25%;
   border-radius: 50%;
 
   box-shadow: 0 0 20px rgba(173, 216, 230, 0.7);
@@ -301,7 +302,7 @@ grid-container {
 
 @media screen and (orientation: landscape) and (max-width: 800px) {
   .profileimg img {
-    max-width: 20%;
+    max-width: 10%;
   }
 
   .quote {
