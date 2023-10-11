@@ -242,12 +242,12 @@ grid-container {
 
 .profileimg {
   min-width: 10%;
-  max-width: 90%;
+  max-width: 60%;
   margin: auto;
 }
 
 .profileimg img {
-  max-width: 25%;
+  width: 90%;
   border-radius: 50%;
 
   box-shadow: 0 0 20px rgba(173, 216, 230, 0.7);
@@ -483,3 +483,42 @@ grid-container {
   }
 }
 
+@media screen and (max-width:867px) and (orientation:landscape){
+  .grid-item1{
+    grid-template-columns: 1fr 1fr;
+  }
+  .profileimg {
+    min-width: 10%;
+    max-width: 70%;
+    margin: auto;
+  }
+  
+  .profileimg img {
+    min-width: 90%;
+
+  }
+
+  .quote{
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width:867px) and (orientation:landscape){
+  .grid-item1{
+    grid-template-columns: 1fr 1fr;
+  }
+  .profileimg {
+    min-width: 10%;
+    max-width: 70%;
+    margin: auto;
+  }
+  
+  .profileimg img {
+    min-width: 60%;
+
+  }
+
+  .quote{
+    grid-column: span 2;
+  }
+}
