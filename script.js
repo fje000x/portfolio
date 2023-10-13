@@ -1,10 +1,21 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-const word ="Hello my name is" ;
 const typed= document.querySelector(".typed")
 let stack =[] ;
 const quote =document.querySelector(".quotetext")
 const quotebtn = document.querySelector(".quotebtn")
+const lightmode = document.querySelector(".lightmode")
+const darkmode = document.querySelector(".darkmode")
+const home = document.querySelector(".griditemhome")
+const homep = document.querySelector(".griditemhome p")
+const socials = document.querySelectorAll(".socials")
+const griditem1 = document.querySelector(".grid-item1")
+const griditem3 = document.querySelector(".grid-item3")
+const hello= document.querySelector(".hello")
+const about= document.querySelector(".aboutme")
+const img= document.querySelector(".profileimg img")
+const projects = document.querySelectorAll(".project");
+const projecth1 = document.querySelector(".projecth1");
 hamburger.addEventListener("click",()=>{
   hamburger.classList.toggle("active")
   navMenu.classList.toggle("active")
@@ -47,4 +58,95 @@ window.addEventListener('load', function() {
   setTimeout(function() {
     loader.style.display = 'none';
   }, 1000); // Change 2000 to your desired loading time in milliseconds
+});
+
+
+lightmode.addEventListener("click",()=>{
+  home.style.background="#edf2f4"
+  typed.style.color="#023047"
+  hello.style.color="#2b2d42"
+  homep.style.color="#023047"
+  
+  socials.forEach(element=>{
+    element.style.color="#2b2d42"
+  })
+  //grid item 1 styles for lightmode 
+  griditem1.style.background="#edf2f4"
+  about.style.color="#2b2d42";
+  img.style.border="1px solid #2b2d42";
+  img.style.boxShadow =" 0 0 10px 5px rgba(112, 128, 144, 0.5)"
+  quote.style.color="#2b2d42"
+  quotebtn.style.background="#2b2d42"
+  
+
+  //grid item 3 styles for lightmode 
+  griditem3.style.background="#edf2f4"
+projects.forEach(project=>{
+  project.style.border="1px solid #2b2d42"
+  project.style.boxShadow="0 0 10px 5px rgba(112, 128, 144, 0.5)"
+  projecth1.style.color="#2b2d42"
+})
+
+
+
+  lightmode.style.display="none"
+  darkmode.style.display="block"
+
+})
+
+darkmode.addEventListener("click",()=>{
+  home.style.background="linear-gradient(to bottom, #023047, #000000)"
+  typed.style.color="aliceblue"
+  hello.style.color="salmon"
+  homep.style.color="aliceblue"
+  
+  socials.forEach(element=>{
+    element.style.color="salmon"
+  })
+  //grid item 1 styles for darkmode
+  griditem1.style.background="linear-gradient(to top, #023047, #000000)"
+  about.style.color="aliceblue";
+  img.style.border="none";
+  img.style.boxShadow =" 0 0 20px rgba(173, 216, 230, 0.7)"
+  quote.style.color="aliceblue"
+  quotebtn.style.background="salmon"
+  
+
+  //grid item 3 styles for darkmode
+  griditem3.style.background="linear-gradient(to bottom, #023047, #000000)"
+projects.forEach(project=>{
+  project.style.border="1px solid salmon"
+  project.style.boxShadow="0px 0px 20px rgba(255, 255, 255, 0.4)"
+  projecth1.style.color="salmon"
+})
+
+
+
+  lightmode.style.display="block"
+  darkmode.style.display="none"
+
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('nav a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href')//.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      let offset = -105; 
+      if (targetId==="projects"){
+        offset = 0;
+      }
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition + offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
 });
