@@ -28,7 +28,7 @@
           <li class="nav-item"><a href="home">Home</a></li>
           <li class="nav-item"><a href="about">About</a></li>
           <li class="nav-item"><a href="projects">Projects</a></li>
-          <li class="nav-item"><a href="contact">Contacts</a></li>
+          <li class="nav-item"><a href="contact">Contact</a></li>
           <li class="nav-item lightmode"><a href="#"><svg class="svg" stroke="currentColor" fill="none" stroke-width="0"
                 viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -52,13 +52,14 @@
       <div>
         <p><span class="hello">Hello</span>, I'm</p>
         <h2 class="typed">Fernando Erazo</h2>
-        <svg class="socials" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+        <a href="https://www.linkedin.com/in/fernando-erazo-620769180"><svg class="socials" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
           height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z">
           </path>
-        </svg>
-        <svg class="socials" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+        </svg></a>
+
+        <a href="https://github.com/fje000x"><svg class="socials" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
           width="1em" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
             <path
@@ -71,6 +72,7 @@
             </clipPath>
           </defs>
         </svg>
+      </a>
 
       </div>
     </div>
@@ -79,7 +81,7 @@
 
       <div class="aboutme">
         <p>I am the proud father of two whiskered furballs. I enjoy the gym and I truly enjoy
-          coding, which allows me to channel my creativity and problem-solving . With a solid understanding of
+          coding, it allows me to channel my creativity and imporove my problem-solving . With a solid understanding of
           Agile methodology, my primary goal is to excel in creating intuitive and user-friendly software.
         </p>
       </div>
@@ -104,6 +106,43 @@
       </div>
     </div>
 
+    <div class="grid-item4 grid-item" id="contact">
+      
+      <div class="formcontainer">
+    <form id="contactForm">
+      <h1>Reach Out</h1>
+        <label for="name"></label>
+        <input type="text"  placeholder="Enter your Name "id="name" name="name" required><br>
+        
+        <label for="email"></label>
+        <input type="email" placeholder="Enter your email" id="email" name="email" required><br>
+        
+        <label for="message"></label><br>
+        <textarea id="message" placeholder="Enter your message" name="message" required></textarea><br>
+        
+        <input id ="submit" type="submit" value="Submit">
+    </form>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+ 
+    <div class="footer-info">
+      <p>&copy; 2023 FernandoErazo.com. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+
+
+
+    </div>
+
+
+
+  </div>
+  
 
   </div>
 
@@ -113,8 +152,10 @@
 
 
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
+ 
 </body>
 
 </html>

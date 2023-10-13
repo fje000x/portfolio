@@ -330,6 +330,7 @@ grid-container {
 .socials {
   color: salmon;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .griditemhome h3 {
@@ -457,6 +458,7 @@ grid-container {
   border-radius: 20px;
   padding: 6px;
   font-size: smaller;
+  cursor: pointer;
 }
 
 @media (min-width: 1280px) {
@@ -586,4 +588,111 @@ grid-container {
 
 .darkmode {
   display: none;
+}
+
+.grid-item4{
+  height:100vh ;
+  min-width: 100%;
+  background:linear-gradient(to top, #023047, #000000);
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+#contactForm {
+  display:grid ;
+  grid-template-columns: 1fr;
+  
+  width:35em;
+  height:30em;
+  
+}
+
+.formcontainer{
+  font-size: larger;
+  max-width: 100%; /* Adjust as needed */
+  margin: auto; /* Center the container horizontally */
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid salmon;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+  
+  
+}
+
+#contactForm ::placeholder {
+  font-size: 1.2em; 
+  text-align: center;
+
+}
+#message::placeholder {
+  font-size: 1.2em;
+
+  padding:17px;
+  
+
+}
+#contactForm input , #message{
+  border-radius: 5px;
+  padding:10px;
+  background-color: aliceblue;
+  border:none;
+
+}
+
+#submit {
+  border-radius: 15px;
+  height:3em;
+  width: 40%; /* You can adjust this value to make the button smaller */
+  margin: 0 auto; /* This centers the button horizontally within its parent element */
+  outline: none;
+  border: none;
+  color:#023047;
+  cursor: pointer;
+  
+}
+#contact h1{
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+@media screen and (orientation:landscape)and (max-width:800px) {
+  .formcontainer{
+    margin-top:15em;
+    
+    
+  }
+  .grid-item4{
+    height: 105vh;
+  }
+  #contactForm input textarea{
+    height:15em;
+    border:none;
+    
+  }
+  .footer{
+    height:auto;
+    
+    
+  }
+
+}
+
+.footer {
+  padding:2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+  color:aliceblue
+}
+
+.footer-info {
+  text-align: center;
 }

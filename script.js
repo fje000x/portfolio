@@ -1,7 +1,7 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const typed= document.querySelector(".typed")
-let stack =[] ;
+
 const quote =document.querySelector(".quotetext")
 const quotebtn = document.querySelector(".quotebtn")
 const lightmode = document.querySelector(".lightmode")
@@ -16,6 +16,9 @@ const about= document.querySelector(".aboutme")
 const img= document.querySelector(".profileimg img")
 const projects = document.querySelectorAll(".project");
 const projecth1 = document.querySelector(".projecth1");
+const griditem4 = document.querySelector(".grid-item4")
+const formContainer =document.querySelector(".formcontainer")
+const footer = document.querySelector(".footer")
 hamburger.addEventListener("click",()=>{
   hamburger.classList.toggle("active")
   navMenu.classList.toggle("active")
@@ -77,6 +80,7 @@ lightmode.addEventListener("click",()=>{
   img.style.boxShadow =" 0 0 10px 5px rgba(112, 128, 144, 0.5)"
   quote.style.color="#2b2d42"
   quotebtn.style.background="#2b2d42"
+
   
 
   //grid item 3 styles for lightmode 
@@ -86,9 +90,14 @@ projects.forEach(project=>{
   project.style.boxShadow="0 0 10px 5px rgba(112, 128, 144, 0.5)"
   projecth1.style.color="#2b2d42"
 })
+//grid item 4 styles for lightmode
+griditem4.style.background="#edf2f4"
+formContainer.style.border="1px solid #2b242"
+formContainer.style.boxShadow="0 0 10px 5px rgba(112, 128, 144, 0.5)"
+formContainer.style.background="#023047"
 
 
-
+footer.style.color="#023047"
   lightmode.style.display="none"
   darkmode.style.display="block"
 
@@ -100,6 +109,8 @@ darkmode.addEventListener("click",()=>{
   hello.style.color="salmon"
   homep.style.color="aliceblue"
   
+  
+  
   socials.forEach(element=>{
     element.style.color="salmon"
   })
@@ -110,6 +121,7 @@ darkmode.addEventListener("click",()=>{
   img.style.boxShadow =" 0 0 20px rgba(173, 216, 230, 0.7)"
   quote.style.color="aliceblue"
   quotebtn.style.background="salmon"
+
   
 
   //grid item 3 styles for darkmode
@@ -119,11 +131,15 @@ projects.forEach(project=>{
   project.style.boxShadow="0px 0px 20px rgba(255, 255, 255, 0.4)"
   projecth1.style.color="salmon"
 })
-
-
-
-  lightmode.style.display="block"
+//grid item 4 styles for darkmode
+ griditem4.style.background="linear-gradient(to top, #023047, #000000)"
+ formContainer.style.border="1px solid salmon"
+ formContainer.style.boxShadow="0px 0px 20px rgba(255, 255, 255, 0.4)"
+  
+ 
+ lightmode.style.display="block"
   darkmode.style.display="none"
+
 
 })
 
@@ -150,3 +166,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+(function() {
+  emailjs.init('1jwR6NqB2hLTpGDFk'); // Replace with your EmailJS public key
+})();
+
+window.onload = function() {
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.sendForm('service_3iai4li', 'template_3aa12k4', this)
+          .then(function() {
+              console.log('SUCCESS!');
+              window.alert("Message Sent")
+          }, function(error) {
+              console.log('FAILED...', error);
+          });
+  });
+}
