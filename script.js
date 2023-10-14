@@ -19,6 +19,7 @@ const projecth1 = document.querySelector(".projecth1");
 const griditem4 = document.querySelector(".grid-item4")
 const formContainer =document.querySelector(".formcontainer")
 const footer = document.querySelector(".footer")
+const gridContainer = document.querySelector(".grid-container")
 hamburger.addEventListener("click",()=>{
   hamburger.classList.toggle("active")
   navMenu.classList.toggle("active")
@@ -69,6 +70,7 @@ lightmode.addEventListener("click",()=>{
   typed.style.color="#023047"
   hello.style.color="#2b2d42"
   homep.style.color="#023047"
+  gridContainer.style.background="#edf2f4"
   
   socials.forEach(element=>{
     element.style.color="#2b2d42"
@@ -98,6 +100,8 @@ formContainer.style.background="#023047"
 
 
 footer.style.color="#023047"
+footer.style.background="#edf2f4"
+
   lightmode.style.display="none"
   darkmode.style.display="block"
 
@@ -108,7 +112,7 @@ darkmode.addEventListener("click",()=>{
   typed.style.color="aliceblue"
   hello.style.color="salmon"
   homep.style.color="aliceblue"
-  
+  gridContainer.style.background="#023047"
   
   
   socials.forEach(element=>{
@@ -136,7 +140,8 @@ projects.forEach(project=>{
  formContainer.style.border="1px solid salmon"
  formContainer.style.boxShadow="0px 0px 20px rgba(255, 255, 255, 0.4)"
   
- 
+ footer.style.color="aliceblue"
+ footer.style.background="#023047"
  lightmode.style.display="block"
   darkmode.style.display="none"
 
