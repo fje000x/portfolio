@@ -606,7 +606,7 @@ grid-container {
 #contactForm {
   display:grid ;
   grid-template-columns: 1fr;
-  
+  text-align: center;
   width:35em;
   height:30em;
   
@@ -615,7 +615,7 @@ grid-container {
 
 .formcontainer{
   font-size: larger;
-  max-width: 100%; /* Adjust as needed */
+  max-width: 90%; /* Adjust as needed */
   min-height:fit-content;
   margin: auto; /* Center the container horizontally */
   padding: 30px;
@@ -719,14 +719,13 @@ grid-container {
 
 @media screen and(max-width:800px){
   .formcontainer{
-    height:auto ;
-
+    height: auto;
+    
   }
-  #contactForm {
 
   
-  width:30em;
-  height:25em;
+  }
   
-}
-}
+
+  
+

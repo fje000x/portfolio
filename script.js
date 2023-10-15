@@ -188,3 +188,17 @@ window.onload = function() {
           });
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var formInputs = document.querySelectorAll('input, select, textarea');
+  formInputs.forEach(function(input) {
+    input.addEventListener('focus', function() {
+      var viewportMetaTag = document.querySelector('meta[name="viewport"]');
+      viewportMetaTag.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes');
+    });
+    input.addEventListener('blur', function() {
+      var viewportMetaTag = document.querySelector('meta[name="viewport"]');
+      viewportMetaTag.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes');
+    });
+  });
+});
